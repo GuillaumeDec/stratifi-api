@@ -1,0 +1,15 @@
+
+old:
+(?:nameOfIssuer>)(.*)(<.+nameOfIssuer>)
+
+new:
+(?:nameOfIssuer>)(.*)(?:<)
+
+new new
+(?:<nameOfIssuer>)(.*?)(?=<\\/nameOfIssuer>)
+(?:.*value>)(.*)(</.*value>)
+
+
+latest:
+(?:<[\\w\\:]{0,4}nameOfIssuer>)(.*?)(?=<\\/[\\w\\:]{0,4}nameOfIssuer)
+(?:<[\\w\\:]{0,4}value>)(.*?)(?=<\\/[\\w\\:]{0,4}value)

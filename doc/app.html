@@ -1,0 +1,53 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module app</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>app</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/Dess/Workspace/stratifi-api/app.py">/Users/Dess/Workspace/stratifi-api/app.py</a></font></td></tr></table>
+    <p><tt>Module&nbsp;that&nbsp;launches&nbsp;a&nbsp;server&nbsp;instance&nbsp;of&nbsp;the&nbsp;wsig&nbsp;app&nbsp;(based&nbsp;on&nbsp;Flask).&nbsp;<br>
+It&nbsp;allows&nbsp;queries&nbsp;on&nbsp;the&nbsp;13F&nbsp;database's&nbsp;latest&nbsp;filings.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-GetFunds"><strong>GetFunds</strong></a>(astock)</dt><dd><tt>Returns&nbsp;all&nbsp;funds&nbsp;that&nbsp;holds&nbsp;a&nbsp;position&nbsp;in&nbsp;the&nbsp;stock&nbsp;astock<br>
+Keyword&nbsp;arguments:<br>
+@param&nbsp;astock&nbsp;str:&nbsp;name&nbsp;of&nbsp;the&nbsp;stock&nbsp;@todo&nbsp;use&nbsp;TICKER&nbsp;name&nbsp;instead<br>
+@return&nbsp;out_data&nbsp;list:&nbsp;a&nbsp;python&nbsp;list&nbsp;of&nbsp;funds&nbsp;holding&nbsp;this&nbsp;stock&nbsp;astock</tt></dd></dl>
+ <dl><dt><a name="-GetPositions"><strong>GetPositions</strong></a>(afund)</dt><dd><tt>Returns&nbsp;all&nbsp;positions&nbsp;of&nbsp;a&nbsp;given&nbsp;fund&nbsp;afund<br>
+&nbsp;<br>
+Keyword&nbsp;arguments:<br>
+@param&nbsp;afund&nbsp;str:&nbsp;name&nbsp;of&nbsp;the&nbsp;fund<br>
+@return&nbsp;out_data&nbsp;list:&nbsp;a&nbsp;python&nbsp;list&nbsp;of&nbsp;positions&nbsp;held&nbsp;by&nbsp;the&nbsp;fund</tt></dd></dl>
+ <dl><dt><a name="-index"><strong>index</strong></a>()</dt></dl>
+ <dl><dt><a name="-query"><strong>query</strong></a>()</dt><dd><tt>query&nbsp;interface&nbsp;with&nbsp;the&nbsp;end-user.<br>
+can&nbsp;be&nbsp;invoked&nbsp;through&nbsp;curl&nbsp;using&nbsp;e.g.&nbsp;curl&nbsp;-X&nbsp;GET&nbsp;<a href="http://127.0.0.1:5000/query?stock='XXXX+INC">http://127.0.0.1:5000/query?stock='XXXX+INC</a>'&nbsp;where&nbsp;+&nbsp;denotes&nbsp;a&nbsp;space<br>
+calls&nbsp;respective&nbsp;functions&nbsp;to&nbsp;retrieve&nbsp;values<br>
+Keyword&nbsp;arguments:<br>
+@return&nbsp;jsonified&nbsp;list&nbsp;of&nbsp;either&nbsp;stock&nbsp;positions&nbsp;for&nbsp;a&nbsp;given&nbsp;fund&nbsp;or&nbsp;funds&nbsp;for&nbsp;a&nbsp;given&nbsp;stock</tt></dd></dl>
+ <dl><dt><a name="-read_data"><strong>read_data</strong></a>(path_to_data<font color="#909090">='data/data_13F.json'</font>)</dt><dd><tt>Read&nbsp;and&nbsp;parse&nbsp;the&nbsp;13F&nbsp;edgar&nbsp;data.&nbsp;Data&nbsp;were&nbsp;crawled&nbsp;with&nbsp;ParseHub&nbsp;for&nbsp;the&nbsp;last&nbsp;Q15'&nbsp;(from&nbsp;12/31/15&nbsp;to&nbsp;2/18/16).&nbsp;About&nbsp;4100&nbsp;filings.&nbsp;<br>
+Keyword&nbsp;arguments:<br>
+@param&nbsp;path_to_data&nbsp;str:&nbsp;path&nbsp;to&nbsp;the&nbsp;json&nbsp;data&nbsp;file<br>
+@return&nbsp;df&nbsp;pandas.DataFrame:&nbsp;a&nbsp;pandas&nbsp;data&nbsp;frame&nbsp;with&nbsp;the&nbsp;13F&nbsp;data</tt></dd></dl>
+ <dl><dt><a name="-update"><strong>update</strong></a>()</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__warningregistry__</strong> = {("Not importing directory './flask': missing __init__.py", &lt;type 'exceptions.ImportWarning'&gt;, 6): True}<br>
+<strong>abort</strong> = &lt;werkzeug.exceptions.Aborter object&gt;<br>
+<strong>app</strong> = &lt;Flask 'app'&gt;<br>
+<strong>request</strong> = &lt;LocalProxy unbound&gt;</td></tr></table>
+</body></html>
